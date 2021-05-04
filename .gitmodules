@@ -1,0 +1,6 @@
+[submodule "crypto01"]
+	path = crypto01
+	url = git@github.com:windows556/crypto01.git
+[submodule "crypto01_backend"]
+	path = crypto01_backend
+	url = git@github.com:windows556/crypto01_backend.git
