@@ -119,8 +119,6 @@ class cryptoRouter {
     }
 
     async postCryptoWatchlist(request, response){
-        // console.log(request);
-        // return response.json(request);
         await this.cryptoWatchlistService.insertWatchlist("windows_xp", "BTC", "USDT");
     }
 

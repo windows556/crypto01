@@ -5,8 +5,17 @@ class cryptoWatchlistService {
         this.knex = knex;
     }
 
+    getWatchlist(username) {
+        return this.knex("watchlist_crypto")
+            .select("symbol", "symbol_to")
+            .where("username", username)
+            .then((row) => {
+                return row;
+            });
+    }
+
     insertWatchlist(username, symbol, symbol_to) {
-        this.knex("watchlist_crypto")
+        return this.knex("watchlist_crypto")
             .insert({
                 username: username,
                 symbol: symbol,
